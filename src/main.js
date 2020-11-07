@@ -5,6 +5,14 @@ Vue.config.productionTip = false
 
 App.mpType = 'app'
 
+// 引入字体图标
+import './static/iconfont.css'
+
+// 注册全局组件
+import YgSeach from './components/YgSeach.vue'
+
+Vue.component('yg-seach', YgSeach)
+
 // 挂载到原型上
 // Vue.prototype.$http = function(params) {
 //   const { url } = params
