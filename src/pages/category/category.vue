@@ -21,10 +21,12 @@
             <view>/</view>
           </view>
           <view class="main">
-            <view class="main-contents" v-for="it in item.children" :key="it.cat_id">
-              <image mode="aspectFill" :src="it.cat_icon"></image>
-              <text>{{ it.cat_name }}</text>
-            </view>
+            <block v-for="it in item.children" :key="it.cat_id">
+              <navigator :url="'/pages/list/list?id=' + it.cat_id + '&name=' + it.cat_name" class="main-contents">
+                <image mode="aspectFill" :src="it.cat_icon"></image>
+                <text>{{ it.cat_name }}</text>
+              </navigator>
+            </block>
           </view>
         </view>
       </scroll-view>

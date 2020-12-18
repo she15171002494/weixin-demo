@@ -7,11 +7,16 @@ App.mpType = 'app'
 
 // 引入字体图标
 import './static/iconfont.css'
+// 引入base.css
+import './uni.less'
 
 // 注册全局组件
 import YgSeach from './components/YgSeach.vue'
-
+import YgTab from './components/YgTab.vue'
+import YgGoods from './components/YgGoods.vue'
 Vue.component('yg-seach', YgSeach)
+Vue.component('yg-tab', YgTab)
+Vue.component('yg-goods', YgGoods)
 
 // 挂载到原型上
 // Vue.prototype.$http = function(params) {
